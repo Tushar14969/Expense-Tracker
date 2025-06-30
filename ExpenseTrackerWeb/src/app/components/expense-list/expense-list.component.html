@@ -1,6 +1,14 @@
 <div class="m-5 flex flex-row justify-between">
     <div class="w-2xl">
-        div 1
+        <div class="my-5 mx-20 flex flex-col">
+            <div class="flex flex-row justify-between">
+                <span class="text-2xl font-semibold">EXPENSES</span>
+                <button class="font-semibold bg-gray-300 p-1 rounded-xl cursor-pointer active:shadow-2xl hover:opacity-80">ADD NEW</button>
+            </div>
+            <div class="mt-1">
+                <p class="text-gray-500">{{now | date}}</p>
+            </div>
+        </div>
     </div>
 
     <div class="w-xs h-full bg-gray-300 rounded-2xl flex justify-center">
