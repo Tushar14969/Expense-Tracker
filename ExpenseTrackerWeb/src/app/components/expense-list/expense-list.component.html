@@ -3,7 +3,7 @@
         <div class="my-5 mx-20 flex flex-col">
             <div class="flex flex-row justify-between">
                 <span class="text-2xl font-semibold">EXPENSES</span>
-                <button class="font-semibold bg-gray-300 p-1 rounded-xl cursor-pointer active:shadow-2xl hover:opacity-80">ADD NEW</button>
+                <button class="font-semibold bg-gray-300 p-1 rounded-xl cursor-pointer active:shadow-2xl hover:opacity-80" (click)="openDialog()">ADD NEW</button>
             </div>
 
             <div class="mt-1">
@@ -23,4 +23,8 @@
     <div class="w-xs h-full bg-gray-300 rounded-2xl flex justify-center">
         
     </div>
+
 </div>
+
+<app-dialog [showDialog]="show" (closeDialog)="closeDialog()"></app-dialog>
+
