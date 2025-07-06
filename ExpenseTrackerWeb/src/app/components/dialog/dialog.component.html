@@ -5,12 +5,12 @@
   <div class="bg-white rounded-2xl p-6 w-full max-w-md shadow-xl flex flex-col">
     <div class="mt-1">
       <label for="expenseDescription">Description: </label>
-      <input type="text" class="bg-gray-100 rounded">
+      <input type="text" class="bg-gray-100 rounded text-gray-400" placeholder="Description" [(ngModel)]="descriptionValue" (ngModelChange)="onDescription()">
     </div>
 
     <div class="mt-1">
       <label for="amount">Amount: </label>
-      <input type="number" class="bg-gray-100 rounded">
+      <input type="number" class="bg-gray-100 rounded text-gray-400" placeholder="Expense" [(ngModel)]="amountValue" (ngModelChange)="onAmount()">
     </div>
 
     <div class="flex justify-center gap-2 mt-1">
@@ -22,7 +22,7 @@
       </button>
       <button
         class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-        (click)="onClose()"
+        (click)="onAdd()"
       >
         Confirm
       </button>

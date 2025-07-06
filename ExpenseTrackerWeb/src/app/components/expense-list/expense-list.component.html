@@ -39,5 +39,5 @@
 
 </div>
 
-<app-dialog [showDialog]="show" (closeDialog)="closeDialog()"></app-dialog>
+<app-dialog [showDialog]="show" [expenseData]="expenses" (closeDialog)="closeDialog()" (description)="receiveDescription($event)" (amount)="receiveAmount($event)"></app-dialog>
 

@@ -16,12 +16,25 @@ export class ExpenseListComponent {
   date?:Date;
   amount?:number;
 
+  receivedDescription?:string;
+  receivedAmount?:number;
+
+  receiveDescription(desc:string){
+    this.receivedDescription = desc;
+  }
+
+  receiveAmount(amt:number){
+    this.receivedAmount = amt;
+  }
+
 openDialog(){
   this.show = true;
 }
 
 closeDialog(){
   this.show = false;
+  this.receivedDescription = '';
+  this.receivedAmount = NaN;
 }
 
   expenses:any[] = [
