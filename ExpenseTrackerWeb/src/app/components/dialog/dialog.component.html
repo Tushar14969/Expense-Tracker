@@ -2,11 +2,18 @@
   class="fixed inset-0 z-50 flex items-center justify-center"
   *ngIf="showDialog"
 >
-  <div class="bg-white rounded-2xl p-6 w-full max-w-md shadow-xl">
-    <h2 class="text-xl font-semibold mb-4">Modal Title</h2>
-    <p class="mb-6">This is the modal content. You can put anything here.</p>
+  <div class="bg-white rounded-2xl p-6 w-full max-w-md shadow-xl flex flex-col">
+    <div class="mt-1">
+      <label for="expenseDescription">Description: </label>
+      <input type="text" class="bg-gray-100 rounded">
+    </div>
 
-    <div class="flex justify-end gap-2">
+    <div class="mt-1">
+      <label for="amount">Amount: </label>
+      <input type="number" class="bg-gray-100 rounded">
+    </div>
+
+    <div class="flex justify-center gap-2 mt-1">
       <button
         class="px-4 py-2 bg-gray-300 text-black rounded hover:bg-gray-400"
         (click)="onClose()"

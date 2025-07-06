@@ -12,6 +12,9 @@ import { DialogComponent } from '../dialog/dialog.component';
 export class ExpenseListComponent {
   now:Date = new Date();
   show:boolean = false;
+  expenseDescription?:string;
+  date?:Date;
+  amount?:number;
 
 openDialog(){
   this.show = true;
@@ -21,5 +24,11 @@ closeDialog(){
   this.show = false;
 }
 
-  expenses:string[] = ['item 1','item 2','item 3'];
+  expenses:any[] = [
+    {expenseDescription:'desc1', date:new Date, amount:12},
+    {expenseDescription:'desc2', date:new Date, amount:120},
+    {expenseDescription:'desc3', date:new Date, amount:125},
+    {expenseDescription:'desc4', date:new Date, amount:1223},
+    {expenseDescription:'desc5', date:new Date, amount:1278},
+  ]
 }

@@ -13,9 +13,22 @@
             <br><hr><br>
 
             <div>
-                <ul>
-                    <li *ngFor="let expense of expenses">{{expense}}</li>
-                </ul>
+                <table class="table-fixed">
+                    <thead>
+                        <tr>
+                        <th class="p-2 bg-gray-200 rounded-xl">Description</th>
+                        <th class="p-2 bg-gray-200 rounded-xl">Date</th>
+                        <th class="p-2 bg-gray-200 rounded-xl">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let expense of expenses">
+                        <td class="px-3">{{expense.expenseDescription}}</td>
+                        <td class="px-3">{{expense.date | date}}</td>
+                        <td class="px-3">{{expense.amount}}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
